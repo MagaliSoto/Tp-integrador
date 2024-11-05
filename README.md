@@ -188,7 +188,7 @@ Este proyecto debe aplicar conocimientos de arquitectura por capas, diseño de i
     
     *   Código organizado, usando la arquitectura por capas.
         
-    *   Crear un archivo DOCUMENTATION.md donde se visualice:
+    *   Archivo DOCUMENTATION.md donde se visualice:
         
         1.  Nombre del grupo.
             
