@@ -17,7 +17,7 @@ Este proyecto debe aplicar conocimientos de arquitectura por capas, diseño de i
     
 *   Menú de navegación que permita navegar por las diferentes secciones del sitio.
     
-*   Debe contener una sección que muestre al menos 5 cursos de los que ofrece el sitio.**Plus:** cada vez que la página carga se deben mostrar 5 cursos diferentes
+*   Debe contener una sección que muestre al menos 5 cursos de los que ofrece el sitio. **Plus:** cada vez que la página carga se deben mostrar 5 cursos diferentes
     
 
 **2\. Vista de Usuarios**
