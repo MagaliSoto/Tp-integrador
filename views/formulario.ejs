@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segundo TP</title>
+</head>
+<body>
+    <form class="form-ABM" id="registroForm">
+        <h2><%= titulo %></h2>
+        
+        <div class="contenedor">
+            <p>Nombre:</p>
+            <input class="input-box" type="text" name="txtNombre" id="txtNombre" value="<%= usuario?.nombre || '' %>" required/>
+        </div>
+
+        <div class="contenedor">
+            <p>Foto de perfil (URL):</p>
+            <input class="input-box" type="url" name="txtImagen" id="txtImagen" value="<%= usuario?.imagen || '' %>"/>
+        </div>
+
+        <div class="contenedor">
+            <p>Email:</p>
+            <input class="input-box" type="email" name="txtEmail" id="txtEmail" value="<%= usuario?.email || '' %>" required/>
+        </div>
+
+        <div class="contenedor">
+            <p>Telefono:</p>
+            <input class="input-box" type="tel" name="txtTelefono" id="txtTelefono" 
+                   value="<%= usuario?.telefono || '' %>"
+                   pattern="\d{2}-\d{4}-\d{4}" 
+                   placeholder="xx-xxxx-xxxx" required/>
+        </div>
+
+        <div class="contenedor">
+            <p>Curso:</p>
+            <select class="input-box" name="txtCursoId" id="txtCursoId">
+                <option value="" disabled <%= !usuario?.cursoId ? 'selected' : '' %>>Selecciona un curso</option>
+                <% cursoOptions.forEach(curso => { %>
+                    <option value="<%= curso %>" <%= usuario?.cursoId === curso ? 'selected' : '' %>><%= curso %></option>
+                <% }); %>
+            </select>
+        </div>
+
+        <div class="contenedor-botones">
+            <button id="btnAceptar" type="submit">Aceptar</button>
+            <% if (usuario) { %>
+                <button id="btnEliminar" type="button">Eliminar</button>
+            <% } %>
+        </div>        
+    </form>
+</body>
+</html>
